@@ -1,0 +1,204 @@
+/* Written with the help of AI */
+
+.tilebox {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.no-ngos {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: #5c4b3b;
+    font-size: 3rem;
+}
+
+.pagination {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.page-button {
+    margin: 0 5px;
+    padding: 0.5rem 1rem;
+    background: #e0e0e0;
+    border: 1px solid #c0c0c0;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.page-button:hover {
+    background: #c0c0c0;
+}
+
+.page-button.active {
+    background: #777;
+    color: white;
+    font-weight: bold;
+    border-color: #555;
+}
+
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modalDates {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-backdrop {   /* dark overlay for the background */
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    z-index: 1000;
+}
+
+.modal-content {
+    --accent: #2a7dac;
+    --accent-dim: #216b8c;
+    --accent-fg: #ffffff;
+
+    background: #fff;
+    width: 90vw;
+    max-width: 600px;
+    max-height: 90vh;
+    padding: 2rem 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content h2 {
+    margin: 0 0 1.5rem;
+    font: 700 1.8rem/1.3 sans-serif;
+    color: var(--accent);
+    border-bottom: 2px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    padding-bottom: 0.75rem;
+    text-align: center;
+}
+
+.modal-button-row {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.modal-button {
+    font: 600 1rem/1.2 sans-serif;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    border: 1px solid transparent;
+    min-width: 100px;
+    text-align: center;
+}
+
+.modal-button.primary {
+    background: var(--accent);
+    color: var(--accent-fg);
+    border-color: var(--accent);
+}
+.modal-button.primary:hover {
+    background: var(--accent-dim);
+    border-color: var(--accent-dim);
+}
+
+.modal-button.secondary {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+}
+.modal-button.secondary:hover {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    color: var(--accent-dim);
+    border-color: var(--accent-dim);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    width: 100%;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    color: #333;
+    background-color: #fdfdfd;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+    overflow-y: auto;
+    min-height: 100px;
+    height: 100px;
+    line-height: 1.5;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group textarea::placeholder {
+    color: #a0a0a0;
+    opacity: 1;
+}
+
+.form-group input[type="text"]:disabled,
+.form-group input[type="email"]:disabled,
+.form-group textarea:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    opacity: 0.7;
+    cursor: not-allowed;
+}

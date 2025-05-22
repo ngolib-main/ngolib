@@ -1,0 +1,121 @@
+.verifyNgos {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.verifyNgos h1 {
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background: #f4f4f4;
+}
+
+.approve,
+.reject {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.approve {
+    background: #28a745;
+    color: white;
+}
+
+.reject {
+    background: #dc3545;
+    color: white;
+}
+
+.approve:hover,
+.reject:hover {
+    opacity: 0.8;
+}
+
+/* Button to toggle per-NGO checklist */
+.detailsBtn {
+    background: none;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.detailsBtn:hover {
+    background: rgba(0, 123, 255, 0.1);
+}
+
+/* Row containing the expanded checklist */
+.checklistRow {
+    background: #f9f9f9;
+}
+
+/* Shared checklist styling */
+.checklist {
+    list-style-type: disc;
+    margin: 12px 0;
+    padding-left: 20px;
+}
+
+.checklist li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.checklist a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Static checklist always visible at top */
+.staticChecklist {
+    margin-top: 30px;
+    padding: 20px;
+    background: #eef5ff;
+    border-radius: 8px;
+}
+
+.staticChecklist h2 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .table,
+    .table th,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+    .table th {
+        display: none;
+    }
+    .table td {
+        border: none;
+        padding: 8px 0;
+    }
+}

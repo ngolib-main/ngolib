@@ -1,0 +1,52 @@
+
+.verify-ngos {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f4f4f4;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.approve {
+    background: #28a745;
+    color: white;
+}
+
+.reject {
+    background: #dc3545;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+

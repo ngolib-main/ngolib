@@ -1,0 +1,110 @@
+/* Written with the help of AI */
+
+.card {
+    /* default colours (overridden by .ngo / .opportunity) */
+    --bg:       #f9f4e8;
+    --fg:       #3e3e3e;
+    --accent:   #cbb39c;
+    --accent-fg:#ffffff;
+
+    /* force identical dimensions for cards */
+    width: 14rem;
+    height: 20rem;
+    padding: 1rem;
+
+    /* four rows, 1fr allows to expand */
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    gap: .5rem;
+
+    background: var(--bg);
+    color: var(--fg);
+    border: 1px solid #d1c7b7;
+    border-radius: .5rem;
+    box-shadow: 0 2px 6px #0002;
+    cursor: pointer;
+}
+
+/* variable overrides */
+.ngo         { --bg:#f9f4e8; --fg:#3e3e3e; --accent:#cbb39c; }
+.opportunity { --bg:#e8f4fa; --fg:#23506d; --accent:#2a7dac; }
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+
+    display: -webkit-box; /* clamping at 3 lines */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descText {
+    font-size: .875rem;
+    text-align: center;
+    margin: 0;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.location {
+    font-size: .75rem;
+    text-align: center;
+    color: var(--fg);
+}
+
+.category {
+    --row-gap: .375rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;      /* rows start at top */
+    gap: var(--row-gap);
+
+    /* 2 × chip line‑height + the gap between rows */
+    max-height: calc(2lh + var(--row-gap));
+    overflow-y: auto;               /* kicks in on 3rd row */
+    overflow-x: hidden;
+}
+
+.tag {
+    display: inline-block;
+    font-size: .625rem;
+    line-height: 1.5rem;
+    padding: 0 .5rem;
+    background: var(--accent);
+    color: var(--accent-fg);
+    border-radius: 9999px;
+    white-space: nowrap;
+}
+
+.action {
+    padding: .375rem;
+    background: var(--accent);
+    color: var(--accent-fg);
+    font-size: .75rem;
+    font-weight: 700;
+    border: none;
+    border-radius: .5rem;
+    transition: background-color .15s;
+}
+
+.action:hover {
+    background: color-mix(in srgb, var(--accent) 90%, white);       /* to lighten and darken the accent colour */
+}
+
+.action:active {
+    background: color-mix(in srgb, var(--accent) 90%, black);
+}

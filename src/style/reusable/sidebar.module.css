@@ -1,0 +1,36 @@
+.sidebar {
+}
+
+.sidebar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 1.5rem;
+    margin-right: 30px;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.sidebar li a:hover {
+    text-decoration: underline;
+}
+
+/*
+// TODO: I believe this two style definitions can be safely removed.
+.sidebar-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.sidebar-button:hover {
+    text-decoration: underline;
+}
+*/

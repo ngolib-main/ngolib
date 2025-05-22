@@ -1,0 +1,54 @@
+/* src/components/Contact/Contact.module.css */
+.contactPage {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactPage h1 {
+    text-align: center;
+}
+
+.contactPage form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactPage label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contactPage select,
+.contactPage textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Make both elements fill container width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    resize: none; /* Disable manual resizing */
+}
+
+.contactPage textarea {
+    height: 100px;
+    overflow-y: auto;
+}
+
+.contactPage button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contactPage button:hover {
+    background: #0056b3;
+}
+

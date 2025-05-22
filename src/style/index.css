@@ -1,0 +1,13 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    /* Remove height: 100% if you want normal scrolling */
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+#root {
+    height: 100%;
+}
+
+/* this css file is for globals */

@@ -1,0 +1,364 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    align-content: center;
+}
+
+.profileWrapper {
+    margin:auto;
+    display: flex;
+    max-width: 80vw;
+    max-height: 100vh;
+    font-family: "Arial", sans-serif;
+    background-color: #fff;
+}
+
+
+.leftSideBar {
+    width: 40vw;
+    background-color: #f8f8f8;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+.photoSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profilePic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid #e5e7eb;
+    transition: 0.3s ease;
+}
+
+.uploadButton {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 0.95rem;
+}
+
+.uploadButton:hover {
+    background-color: #4338ca;
+    transform: scale(1.02);
+}
+
+.informationContainer {
+    width: 100%;
+    align-items: center;
+}
+
+.info h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+.info p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Right side bar / main content */
+.rightSideBar {
+    flex: 1;
+    height: 100vh;
+    padding: 20px;
+    padding-bottom: 80px;
+    overflow-y: auto;
+    width: 40vw;
+    box-sizing: border-box;
+}
+
+/* Accordion style */
+.accordionSection {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+.accordionTitle {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Optionally add a chevron or arrow indicator */
+.accordionTitle::after {
+    content: "▼";
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.accordionContent.open + .accordionTitle::after {
+    transform: rotate(-180deg);
+}
+
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordionContent.open {
+    max-height: 900px;
+    overflow: scroll;
+
+}
+
+.accordionContent ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.accordionContent li {
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    color: #333;
+    background-color: #fff;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordionContent li span {
+    font-weight: bold;
+    margin-left: 10px;
+    color: green;
+
+}
+
+.adminDisplay {
+    font-weight: bold;
+    margin-left: 10px;
+    color: red;
+    width: 100px;
+}
+
+
+.unfollowButton {
+    margin-left: 1rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.unfollowButton:hover {
+    background-color: #c0392b;
+}
+.followerItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.followerInfo {
+    display: flex;
+    flex-direction: column;
+}
+.followerActions {
+    display: flex;
+    align-items: center;
+}
+
+.loadingWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 119, 255, 0.2);
+    border-top-color: #0077ff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 1rem;
+}
+
+.loadingText {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.linkRedirect {
+    display: inline-block;
+    width: 60%;
+    align-content: center;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    background-color: #4f46e5;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.linkRedirect:hover {
+    background-color: #4338ca;
+    transform: scale(1.02);
+}
+
+.accordionContent li.linkWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 10px;
+}
+
+.linkContent {
+    text-align: center;
+}
+
+
+.tagInputContainer {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.tagInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.addTagButton {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.addTagButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+
+.filterRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filterButton{
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    width: 100px;
+}
+
+.filterButton:hover {
+    background-color: #c0392b;
+}
+
+.cleanButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+.cleanButton:hover {
+    background-color: #c0392b;
+}
+
+.Select{
+    padding: 5px; /* Comfortable inner spacing */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 16px; /* Legible text size */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.amountInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.itemButton {
+    margin-top: 4px;
+    margin-left: 4px;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    color: red
+}
