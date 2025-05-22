@@ -26,9 +26,8 @@ yarn-error.log*
 .idea
 /src/backend/.env
 
-/src/backend/.env
 .junie
 feature_ideas
 
-src/backend/.env
+.env
 .vercel
