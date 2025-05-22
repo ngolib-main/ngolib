@@ -5,6 +5,7 @@ All features you can navigate to from the homepage, you will be able to access t
 once you normally log in with admin credentials
 
 * [Main login page](http://10.112.72.28:3000/)
+* [Main page (external)](https://ngolib.ddns.net/)
 
 ---
 
